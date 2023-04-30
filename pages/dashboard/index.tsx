@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Layout from "../../components/dashboard/layout";
-import Table from "../../components/dashboard/table";
-
+import { Fade } from "react-awesome-reveal";
 const Sidebar = () => {
   const [hide, setHide] = useState(true);
 
   return (
     <Layout>
       {hide ? (
+        <Fade delay={1}>
         <div style={{width:'900px',marginLeft:'40px'}}  className="mt-12 px-4  rounded-md border-l-4 border-green-500 bg-green-50 ">
           <div className="flex justify-between py-3">
             <div className="flex">
@@ -28,7 +28,7 @@ const Sidebar = () => {
               <div className="self-center ml-3">
                 <span className="text-green-600 font-semibold">Success</span>
                 <p className="text-green-600 mt-1">
-                  Team member has been added successfully.
+                You has been entered successfully to dashboard manage.
                 </p>
               </div>
             </div>
@@ -48,6 +48,7 @@ const Sidebar = () => {
             </button>
           </div>
         </div>
+        </Fade>
       ) : (
         ""
       )}
