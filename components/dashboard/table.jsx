@@ -1,7 +1,8 @@
+import Image from "next/image";
 import React, { useState } from "react";
 import { Slide } from "react-awesome-reveal";
 import {AiOutlineUser} from 'react-icons/ai'
-import { Fade } from "react-awesome-reveal";
+
 function Table() {
   const [rightSide, setRightSide] = useState(false);
   const [search,setSearch]= useState("")
@@ -105,7 +106,7 @@ function Table() {
        <tr key={idx} > 
       
               <td className="flex items-center gap-x-3 py-3 px-6 whitespace-nowrap">
-                 {item.avatar ?<img src={item.avatar} className="w-10 h-10 rounded-full" />: 
+                 {item.avatar ?<Image  src={item.avatar} className="w-10 h-10 rounded-full" />: 
                  <span className="w-10 h-10 bg-gray-100 text-[24px] flex items-center justify-center rounded-full"><AiOutlineUser/></span>}
                 <div>
                   <span className="block text-gray-700 text-sm font-medium">

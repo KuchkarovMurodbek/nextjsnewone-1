@@ -69,7 +69,7 @@ function Contactus() {
             <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {
                     integrations.map((item, idx) => (
-                        <li className="border rounded-lg bg-white">
+                        <li key={idx} className="border rounded-lg bg-white">
                             <div className="flex items-start justify-between p-4">
                                 <div className="space-y-2">
                                     <span style={{color:`${item.color}`}} className='text-[20px]'>  {item.icon}</span>

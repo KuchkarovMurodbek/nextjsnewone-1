@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function NotFound() {
@@ -16,12 +17,12 @@ function NotFound() {
                         Sorry, the page you are looking for could not be found or has been removed.
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-3">
-                        <a href="/" className="block py-2 px-4 text-white font-medium bg-red-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg">
+                        <Link href="/" className="block py-2 px-4 text-white font-medium bg-red-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg">
                             Go back
-                        </a>
-                        <a href="/" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 font-medium duration-150 active:bg-gray-100 border rounded-lg">
+                        </Link>
+                        <Link href="/" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 font-medium duration-150 active:bg-gray-100 border rounded-lg">
                             Contact support
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
