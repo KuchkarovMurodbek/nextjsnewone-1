@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Login() {
   const [user, setUser] = useState("");
@@ -13,10 +14,16 @@ export default function Login() {
       router.push("/dashboard");
      
     }
+    else{
+      toast.error("username or password is incorrect",{
+        autoClose: 2000,
+      });
+    }
   };
   return (
     <div className="bg-gray-200 font-sans text-gray-700 h-screen">
       <div className="container mx-auto p-8 flex">
+        <ToastContainer theme="colored"/>
         {
           <div className="max-w-md w-full mx-auto">
             <h1 className="text-4xl text-center mb-12 font-thin">Company</h1>

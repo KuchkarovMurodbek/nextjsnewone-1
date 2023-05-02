@@ -7,7 +7,7 @@ import {AiOutlineCheck} from 'react-icons/ai'
 function Doc() {
     
   return (
-    <div className=" h-screen ">
+    <div className=" h-screen  text-white" style={{background:'#202124'}}>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="items-start justify-between py-4 border-b md:flex">
           <div>
@@ -26,45 +26,45 @@ function Doc() {
 
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 pt-4">
         <p>
-          <code className="bg-gray-100 px-2 italic">home</code> - is landing
+          <code className="bg-gray-100 px-2   italic text-gray-800">home</code> - is landing
           page
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">doc</code> - is this page
+          <code className="bg-gray-100 px-2  italic text-gray-800">doc</code> - is this page
           here
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">about us </code> - it is
+          <code className="bg-gray-100 px-2 italic text-gray-800">about us </code> - it is
           only about me
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">blogs </code> - it is blogs
+          <code className="bg-gray-100 px-2 italic text-gray-800 text-gray-800">blogs </code> - it is blogs
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">contact us </code> - here
+          <code className="bg-gray-100 px-2 italic text-gray-800 text-gray-800">contact us </code> - here
           you can contact me with social application or email
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">sign in </code> - it is path
+          <code className="bg-gray-100 px-2 italic text-gray-800 text-gray-800">sign in </code> - it is path
           to access to dashboard page;{" "}
-          <span className="bg-green-200 px-1">username:</span> admin and also{" "}
-          <span className="bg-green-200 px-1">password:</span> admin{" "}
+          <span className="bg-green-700 px-1">username:</span> <span className="bg-gray-500 text-white">admin</span> and also{" "}
+          <span className="bg-green-700 px-1">password:</span> <span className="bg-gray-500 text-white">admin</span>{" "}
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">sign up </code> - it is not
+          <code className="bg-gray-100 px-2 italic text-gray-800 ">sign up </code> - it is not
           used if we have it , just style
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">dashboard </code> - it is
+          <code className="bg-gray-100 px-2 italic text-gray-800">dashboard </code> - it is
           only dashboard page
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">dashboard/users </code> - it
+          <code className="bg-gray-100 px-2 italic text-gray-800">dashboard/users </code> - it
           is users page , you can use the functinalitu of add,delete, update,
           filter
         </p>
         <p>
-          <code className="bg-gray-100 px-2 italic">dashboard/charts </code> -
+          <code className="bg-gray-100 px-2 italic text-gray-800">dashboard/charts </code> -
           it is the collection of chart
         </p>
       </div>
@@ -72,7 +72,7 @@ function Doc() {
         <p className="font-medium ">The list of used technologies:</p>
         <ul >
 
-        {['Nextjs','Tailwind Css','Float UI', 'Emotion/React', 'React-Icons','React-awesome-reveal'].map((item)=><li key={item} className="flex  items-center  italic">{item}   <span className="px-1 text-green-500"> <AiOutlineCheck/></span></li>)}
+        {['Nextjs','Tailwind Css','Float UI', 'Emotion/React', 'React-Icons','React-awesome-reveal','React-toastify','react-google-charts'].map((item)=><li key={item} className="flex  items-center  italic">   <p className="px-1 text-green-500 bg-gray-100 flex items-center w-60 my-1 justify-between"> {item } {' '} <span className="text-gray-600"><AiOutlineCheck/></span></p></li>)}
         
         </ul>
       </div>

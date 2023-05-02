@@ -8,10 +8,12 @@ import SevenPart from "../components/home/SevenPart";
 import Footer from "../components/home/Footer";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { RiAlarmWarningFill } from "react-icons/ri";
-import { Bounce } from "react-awesome-reveal";
+import { Bounce,Zoom } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
+
+  const [hideScroll,setHideScroll]= useState(false);
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -20,8 +22,10 @@ export default function Home() {
     console.log(window.scrollY);
     if (window.scrollY >= 466) {
       setNavbar(true);
+      setHideScroll(true)
     } else {
       setNavbar(false);
+      setHideScroll(false)
     }
   };
 
@@ -99,9 +103,9 @@ export default function Home() {
       >
         <div className=" container mx-auto flex flex-wrap items-center">
           <div className="flex-1 flex justify-between items-center">
-            <a
+            <button
               className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-              href="/"
+            
             >
               <span
                 style={{
@@ -115,8 +119,8 @@ export default function Home() {
                 <BsFillRocketTakeoffFill />
               </span>
 
-              <span className="ml-3 text-xl">EASY PORTFOLIO</span>
-            </a>
+              <span className={`ml-3 text-xl ${navbar?'text-white':''}`}>EASY PORTFOLIO</span>
+            </button>
           </div>
 
           <label
@@ -173,14 +177,15 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a
+                  <Link
+                     
                     className={`${
                       navbar ? "text-white" : ""
                     } md:px-4 py-2 md:py-4 px-0 block text-gray-700 hover:font-medium`}
-                    href=""
+                    href="/contactus"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
@@ -224,6 +229,7 @@ export default function Home() {
 
       <Footer />
 
+     {hideScroll?<Zoom delay={1000}>
       <button
         onClick={scrollToTop}
         className="rounded-full w-12 h-12 bg-gray-100 fixed bottom-0 right-0 flex items-center justify-center text-gray-800 mr-8 mb-8 shadow-sm border-gray-300 border"
@@ -242,6 +248,8 @@ export default function Home() {
           <path d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
         </svg>
       </button>
+
+     </Zoom>:''}
     </>
   );
 }

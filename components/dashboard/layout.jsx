@@ -168,7 +168,7 @@ function Layout({ children }) {
                       ADMIN
                     </span>
                     <a
-                      href=""
+                      href="#"
                       className="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
                     >
                       View profile
