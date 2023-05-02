@@ -5,7 +5,7 @@ import {BsTelegram,BsFacebook,BsDiscord} from 'react-icons/bs'
 function Contactus() {
 
     const integrations = [
-        {
+        {   id:1,
             title: "Instagram",
             desc: "My account",
             icon: <AiOutlineInstagram/>,
@@ -13,6 +13,7 @@ function Contactus() {
             href:'https://www.instagram.com/murod_kuchkarov/'
     
         }, {
+            id:2,
             title: "Github",
             desc: "GitHub account with some code",
             icon: <AiFillGithub/>,
@@ -20,6 +21,7 @@ function Contactus() {
             href:'https://github.com/KuchkarovMurodbek'
     
         }, {
+            id:3,
             title: "Discord",
             desc: "Globaly connection for",
             icon: <BsDiscord/>,
@@ -28,7 +30,7 @@ function Contactus() {
     
     
         },
-        {
+        { id:4,
             title: "Telegram",
             desc: "It is more convenient to connect for me",
             icon: <BsTelegram/>,
@@ -38,7 +40,7 @@ function Contactus() {
     
         },
        
-        {
+        { id:5,
             title: "Facebook",
             desc: "It is also possible type",
             icon: <BsFacebook/>,
@@ -47,7 +49,7 @@ function Contactus() {
     
     
         },
-        {
+        { id:6,
             title: "Phone",
             desc: "+9943125825",
             icon: <AiFillPhone/>,
@@ -68,8 +70,8 @@ function Contactus() {
             </div>
             <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {
-                    integrations.map((item, idx) => (
-                        <li key={idx} className="border rounded-lg bg-white">
+                    integrations.map((item) => (
+                        <li key={item.id} className="border rounded-lg bg-white">
                             <div className="flex items-start justify-between p-4">
                                 <div className="space-y-2">
                                     <span style={{color:`${item.color}`}} className='text-[20px]'>  {item.icon}</span>
@@ -79,9 +81,9 @@ function Contactus() {
                                 <Link href={item.href} target='_blank' className="text-gray-700 text-sm border rounded-lg px-3 py-2 duration-150 hover:bg-gray-100">Connect</Link>
                             </div>
                             <div className="py-5 px-4 border-t text-right">
-                                <a  className="text-indigo-600 hover:text-indigo-500 text-sm font-medium">
+                                <button  className="text-indigo-600 hover:text-indigo-500 text-sm font-medium">
                                     For question 
-                                </a>
+                                </button>
                             </div>
                         </li>
                     ))
